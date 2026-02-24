@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment-01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 min-h-screen flex flex-col gap-10 items-center justify-center ">
+
+  <!-- Main Card -->
+  <div class="bg-white shadow-lg rounded-xl p-6 sm:p-10 w-[90%] max-w-md flex flex-col items-center gap-6">
+
+    <p id="info" class="bg-blue-100 text-center text-gray-700 px-4 py-3 rounded-md w-full">
+      Click the button to get details
+    </p>
+
+    <button id="get-detail"
+      class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 w-full sm:w-auto">
+      Get Details
+    </button>
+
+  </div>
+
+  <!-- DataTypes -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md flex flex-col gap-4">
+
+    <h2 class="text-xl font-bold text-center mb-6">
+      JavaScript Data Types
+    </h2>
+
+    <div id="output" class="space-y-3 text-gray-700"></div>
+    <button id="check" class="p-4 bg-blue-100">Check Type of data</button>
+
+  </div>
+  <!-- Math Operations -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md flex flex-col gap-4">
+
+    <h2 class="text-xl font-bold text-center mb-4">
+      Basic Math Operations
+    </h2>
+
+    <div id="result" class="flex flex-col gap-3"></div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
