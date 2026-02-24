@@ -8,44 +8,70 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-200 min-h-screen flex flex-col gap-10 items-center justify-center ">
+<body class="bg-gray-200 min-h-screen flex flex-col gap-10 items-center justify-center">
 
   <!-- Main Card -->
   <div class="bg-white shadow-lg rounded-xl p-6 sm:p-10 w-[90%] max-w-md flex flex-col items-center gap-6">
-
     <p id="info" class="bg-blue-100 text-center text-gray-700 px-4 py-3 rounded-md w-full">
       Click the button to get details
     </p>
-
     <button id="get-detail"
       class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 w-full sm:w-auto">
       Get Details
     </button>
-
   </div>
 
-  <!-- DataTypes -->
+  <!-- JavaScript Data Types -->
   <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md flex flex-col gap-4">
-
-    <h2 class="text-xl font-bold text-center mb-6">
-      JavaScript Data Types
-    </h2>
-
+    <h2 class="text-xl font-bold text-center mb-6">JavaScript Data Types</h2>
     <div id="output" class="space-y-3 text-gray-700"></div>
-    <button id="check" class="p-4 bg-blue-100">Check Type of data</button>
-
+    <button id="check" class="p-4 bg-blue-100 rounded-md">Check Type of Data</button>
   </div>
-  <!-- Math Operations -->
+
+  <!-- Basic Math Operations -->
   <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md flex flex-col gap-4">
-
-    <h2 class="text-xl font-bold text-center mb-4">
-      Basic Math Operations
-    </h2>
-
+    <h2 class="text-xl font-bold text-center mb-4">Basic Math Operations</h2>
     <div id="result" class="flex flex-col gap-3"></div>
-
   </div>
+
+  <!-- Temperature Conversion -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md text-center">
+    <h2 class="text-xl font-bold mb-4">Temperature Conversion</h2>
+    <div id="outputt" class="space-y-3 text-gray-700"></div>
+  </div>
+
+  <!-- Even or Odd Checker -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md text-center">
+    <h2 class="text-xl font-bold mb-4">Even or Odd Checker</h2>
+    <div id="resultt"></div>
+  </div>
+
+  <!-- Grade Checker -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md text-center">
+    <h2 class="text-xl font-bold mb-4">Grade Checker</h2>
+    <div id="resulttt"></div>
+  </div>
+
+  <!-- Voting Eligibility Checker -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md text-center">
+    <h2 class="text-xl font-bold mb-4">Voting Eligibility Checker</h2>
+    <div id="resultttt"></div>
+  </div>
+
+  <!-- Numbers 1–10 -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md text-center">
+    <h2 class="text-xl font-bold mb-4">Numbers from 1 to 10</h2>
+    <div id="numbers" class="flex flex-col gap-2"></div>
+  </div>
+
+  <!-- Multiplication Table -->
+  <div class="bg-white shadow-md rounded-lg p-8 w-[90%] max-w-md text-center">
+    <h2 class="text-xl font-bold mb-4">Multiplication Table</h2>
+    <div id="table" class="flex flex-col gap-2"></div>
+  </div>
+
   <script src="script.js"></script>
+
 </body>
 
 </html>
