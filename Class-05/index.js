@@ -35,3 +35,4 @@ const newnum = num
     return acc + val;
   }, 34);
 console.log(newnum);
+console.log("hi");
