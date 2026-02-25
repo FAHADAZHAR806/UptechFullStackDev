@@ -5,21 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const isStudent = true;
   const designation = undefined;
   const absent = null;
-
   const num1 = 20;
   const num2 = 5;
-
   const celsius = 25;
   const fahrenheit = (celsius * 9) / 5 + 32;
-
   const number = 72;
-
   const marks = 75;
   let grade;
-
   const ageForVote = 16;
   let voteMessage;
-
   const multiplicationNumber = 5;
 
   // ---------- DOM Elements ----------
