@@ -77,3 +77,12 @@ function areAllUsersActive() {
 }
 
 console.log(areAllUsersActive());
+
+// Write a function that calculates the average age of all users
+function getAverageAge() {
+  let totalage = users.reduce((acc, user) => {
+    return acc + user.age;
+  }, 0);
+  return totalage / users.length;
+}
+console.log(getAverageAge());
