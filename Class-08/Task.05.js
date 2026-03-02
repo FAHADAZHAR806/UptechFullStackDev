@@ -70,6 +70,7 @@ function findUserById(id) {
 
 console.log(findUserById(4));
 
+// Write a function that checks if all users are active
 function areAllUsersActive() {
   return users.every((user) => {
     return user.isActive;
@@ -86,3 +87,49 @@ function getAverageAge() {
   return totalage / users.length;
 }
 console.log(getAverageAge());
+
+// Write a function that returns users who are active and older than a specified age
+
+function getActiveUsersOlderThan() {
+  return users.filter((user) => {
+    return user.isActive && user.age > 30;
+  });
+}
+console.log(getActiveUsersOlderThan());
+
+// Write a function that returns all products sorted by price (low to high)
+
+const products = [
+  {
+    id: 101,
+    name: "Laptop",
+    price: 999.99,
+    category: "electronics",
+    stock: 15,
+  },
+  {
+    id: 102,
+    name: "Smartphone",
+    price: 699.99,
+    category: "electronics",
+    stock: 25,
+  },
+  { id: 103, name: "Book", price: 19.99, category: "books", stock: 50 },
+  {
+    id: 104,
+    name: "Headphones",
+    price: 149.99,
+    category: "electronics",
+    stock: 10,
+  },
+  { id: 105, name: "T-shirt", price: 29.99, category: "clothing", stock: 100 },
+  { id: 106, name: "Shoes", price: 79.99, category: "clothing", stock: 30 },
+];
+
+function sortProductsByPrice() {
+  return [...products].sort((a, b) => {
+    return a.price - b.price;
+  });
+}
+
+console.log(sortProductsByPrice());
