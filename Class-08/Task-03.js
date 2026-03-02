@@ -1,9 +1,9 @@
 const users = [
-  { name: "Alice", courses: ["Math", "Science", "English"] },
-  { name: "Bob", courses: ["Math", "Art"] },
-  { name: "Charlie", courses: ["Science", "Math", "History"] },
-  { name: "David", courses: ["Math", "English"] },
-  { name: "Eve", courses: ["Art", "Science"] },
+  { name: "Alice", courses: ["Math", "Science", "English","Urdu"] },
+  { name: "Bob", courses: ["Math", "Art","Urdu"] },
+  { name: "Charlie", courses: ["Science", "Math", "History","Urdu"] },
+  { name: "David", courses: ["Math", "English","Urdu"] },
+  { name: "Eve", courses: ["Art", "Science","Urdu"] },
 ];
 let courseCount = {};
 for (let i = 0; i < users.length; i++) {
