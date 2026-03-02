@@ -93,7 +93,7 @@ console.log(nums);
 // 5! = 5 × 4 × 3 × 2 × 1
 let value = 5;
 let fac = 1;
-for (let i = 1; i <= value; i++) {
+for (let i = 5; i > 0; i--) {
   fac *= i;
 }
 console.log(fac);

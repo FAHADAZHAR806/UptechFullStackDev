@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2a2a2a;
+      padding: 20px;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: #3a3a3a;
+      color: white;
+      border: 5px solid #2a2a2a;
+      border-radius: 20px;
+
+    }
+
+    button {
+      width: 110px;
+      padding: 5px 20px;
+      border: 2px solid blue;
+      border-radius: 10px;
+      background-color: blue;
+      color: white;
+    }
+
+    img {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <img src="" alt="" srcset="./assets/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg" height="300px" width="600px" id="image">
+      <button id="show" onclick="showImage()">Show Image</button>
+      <button id="hide" onclick="hideImage()">Hide Image</button>
+
+    </div>
+  </div>
+
+  <script src="Task-04.js"></script>
+</body>
+
+</html>
