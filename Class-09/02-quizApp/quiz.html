@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Quiz App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body
+  class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-4">
+
+  <div
+    class="bg-white w-full max-w-md sm:max-w-xl md:max-w-2xl rounded-3xl shadow-2xl p-6 sm:p-8 transition-all duration-300">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-xl sm:text-2xl font-bold text-gray-800">
+        Quiz App
+      </h1>
+      <span id="progress" class="text-sm text-gray-500">
+        Question 1 / 5
+      </span>
+    </div>
+
+    <!-- Question -->
+    <div class="mb-6">
+      <h2 id="question" class="text-lg sm:text-xl font-semibold text-gray-700">
+        Question text
+      </h2>
+    </div>
+
+    <!-- Options -->
+    <div id="options" class="space-y-3 mb-6">
+      <!-- Options inserted by JS -->
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-between items-center">
+      <button onclick="prevQuestion()" class="px-4 py-2 rounded-xl bg-gray-200 hover:bg-gray-300 transition">
+        Back
+      </button>
+
+      <button onclick="nextQuestion()"
+        class="px-6 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 transition active:scale-95">
+        Next
+      </button>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="hidden mt-6 text-center text-xl font-bold"></div>
+
+  </div>
+
+  <script src="quiz.js"> </script>
+
+</body>
+
+</html>
