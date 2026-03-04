@@ -12,6 +12,7 @@ function getPost() {
       displayTitle.innerText = data.title;
       displayBody.innerText = data.body;
       console.log("GET Data:", data);
+      alert("You can view data");
     })
     .catch((err) => console.error("GET Error:", err));
 }
@@ -36,7 +37,9 @@ function createPost() {
     .then((data) => {
       displayTitle.innerText = data.title;
       displayBody.innerText = data.body;
+      // just for testing  debugger;
       console.log("POST Data:", data);
+      // just for testing  debugger;
       alert("Post Created!");
     })
     .catch((err) => console.error("POST Error:", err));

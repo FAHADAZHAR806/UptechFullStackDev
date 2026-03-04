@@ -8,16 +8,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 h-screen flex justify-center items-center">
+<body class="bg-[#3a3a3a] h-screen flex justify-center items-center ">
 
   <!-- Card -->
-  <div class="bg-white p-6 w-96 rounded-xl shadow-lg">
+  <div class="bg-white p-10 w-120 rounded-2xl shadow-lg flex flex-col  justify-center items-center gap-2">
     <h3 class="text-xl font-bold text-center mb-4">Post Card</h3>
 
     <input type="text" id="title" placeholder="Enter title" class="border p-2 w-full mb-2 rounded">
     <textarea id="body" placeholder="Enter body" class="border p-2 w-full mb-2 rounded"></textarea>
 
-    <div class="flex justify-between mb-4">
+    <div class="flex flex-col items-center md:flex-row gap-5 mb-4">
       <button onclick="createPost()" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Create</button>
       <button onclick="getPost()" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Read</button>
       <button onclick="updatePost()"
@@ -26,13 +26,15 @@
     </div>
 
     <hr class="my-2">
+    <div class="flex flex-col items-center justify-center ">
+      <h2 id="displayTitle" class="font-semibold text-lg mb-1"></h2>
+      <p id="displayBody" class="text-gray-700"></p>
+    </div>
 
-    <h4 id="displayTitle" class="font-semibold text-lg mb-1"></h4>
-    <p id="displayBody" class="text-gray-700"></p>
   </div>
 
 
-  <script src="todo.js"></script>
+  <script src="fetch.js"></script>
 
 </body>
 
