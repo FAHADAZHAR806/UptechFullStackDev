@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Card Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex justify-center items-center">
+
+  <!-- Card -->
+  <div class="bg-white p-6 w-96 rounded-xl shadow-lg">
+    <h3 class="text-xl font-bold text-center mb-4">Post Card</h3>
+
+    <input type="text" id="title" placeholder="Enter title" class="border p-2 w-full mb-2 rounded">
+    <textarea id="body" placeholder="Enter body" class="border p-2 w-full mb-2 rounded"></textarea>
+
+    <div class="flex justify-between mb-4">
+      <button onclick="createPost()" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Create</button>
+      <button onclick="getPost()" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Read</button>
+      <button onclick="updatePost()"
+        class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Update</button>
+      <button onclick="deletePost()" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
+    </div>
+
+    <hr class="my-2">
+
+    <h4 id="displayTitle" class="font-semibold text-lg mb-1"></h4>
+    <p id="displayBody" class="text-gray-700"></p>
+  </div>
+
+
+  <script src="todo.js"></script>
+
+</body>
+
+</html>
