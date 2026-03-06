@@ -3,44 +3,129 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Modern Todo App</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  </style>
+
 </head>
 
-<body class="min-h-screen  flex items-center justify-center p-4">
+<body class="min-h-screen flex items-center justify-center p-4
+
+bg-[#3a3a3a]">
 
   <!-- Main Container -->
-  <div class="w-full max-w-md sm:max-w-lg md:max-w-xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8">
+
+  <div class="w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl
+
+bg-white text-black
+
+rounded-3xl shadow-2xl
+
+border border-gray-200
+
+p-6 sm:p-8 md:p-10
+
+transition">
 
     <!-- Header -->
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">
+
+    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-8">
+
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-wide
+text-black text-center sm:text-left">
+
         Todo App
+
       </h1>
-      <span id="taskCount" class="text-sm text-gray-500"></span>
+
+      <span id="taskCount" class="text-sm font-medium text-gray-600 text-center sm:text-right"></span>
+
     </div>
 
     <!-- Input Section -->
-    <div class="flex flex-col sm:flex-row gap-3 mb-6">
-      <input type="text" id="taskInput" placeholder="Enter a new task..."
-        class="flex-1 px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
-      <button onclick="addTask()"
-        class="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 active:scale-95 transition duration-200">
-        Add
+
+    <div class="flex flex-col sm:flex-row gap-3 mb-8">
+
+      <input type="text" id="taskInput" placeholder="Enter a new task..." class="flex-1 px-5 py-3 rounded-xl
+border border-gray-300
+shadow-sm
+
+focus:outline-none
+focus:ring-2
+focus:ring-indigo-500
+
+text-sm sm:text-base
+
+transition" />
+
+      <button onclick="addTask()" class="px-6 py-3
+
+bg-gradient-to-r from-indigo-500 to-purple-600
+
+text-white font-semibold
+
+rounded-xl
+
+shadow-lg
+
+hover:scale-105
+hover:shadow-xl
+
+active:scale-95
+
+transition duration-200">
+
+        Add Task
+
       </button>
+
     </div>
 
     <!-- Task List -->
-    <ul id="taskList" class="space-y-3 mb-6"></ul>
+
+    <ul id="taskList" class="space-y-3
+max-h-[350px]
+overflow-y-auto
+pr-1
+scroll-smooth
+
+"></ul>
 
     <!-- Clear All -->
-    <button onclick="clearAll()" class="w-full bg-red-500 text-white py-3 rounded-xl hover:bg-red-600 transition">
+
+    <button onclick="clearAll()" class="w-full mt-4
+
+bg-gradient-to-r from-red-500 to-pink-500
+
+text-white font-semibold
+
+py-3 rounded-xl
+
+shadow-md
+
+hover:scale-[1.02]
+hover:shadow-lg
+
+active:scale-95
+
+transition">
+
       Clear All Tasks
+
     </button>
 
   </div>
 
   <script src="todo.js"></script>
+
 </body>
 
 </html>
