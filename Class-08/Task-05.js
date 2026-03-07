@@ -163,8 +163,8 @@ console.log(totalCount);
 
 // Write a function that returns the emails of active users sorted by age (youngest first)
 
-function getActiveUserEmailsSortedByAge(users) {
-  return users
+function getActiveUserEmailsSortedByAge(a) {
+  return a
     .filter((user) => user.isActive)
     .sort((a, b) => a.age - b.age)
     .map((user) => user.email);

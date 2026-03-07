@@ -46,8 +46,8 @@ function getDevelopers(a) {
   return a.filter((user) => user.tags.includes("developer"));
 }
 
-let developers = getDevelopers(users);
-console.log(developers);
+let Developers = getDevelopers(users);
+console.log(Developers);
 
 const products = [
   {
