@@ -18,20 +18,18 @@ console.log(numbers);
 
 //  Reverse the array [1 mark]
 
-let newnumbers = [1, 2, 3, 4, 5, 6];
 let reversed = [];
-for (let i = newnumbers.length; i > 0; i--) {
+for (let i = numbers.length; i >= 0; i--) {
   reversed.push(i);
 }
 console.log(reversed);
 
 //  Check if a specific number exists in the array [1 mark]
-console.log(numbers.includes(6));
-console.log(numbers.includes(7));
+console.log(numbers.includes(5));
+// console.log(numbers.includes(7));
 
 // Create a new array with each number multiplied by 2 using map() [1 mark]
-console.log(newnumbers);
-let multilesoftwo = newnumbers.map((num) => {
+let multilesoftwo = numbers.map((num) => {
   return num * 2;
 });
 console.log(multilesoftwo);
@@ -46,4 +44,4 @@ console.log(filtered);
 firstdivisible = filtered.find((num) => {
   return num % 2 === 0;
 });
-console.log(firstdivisible);
+console.log(`First number divisible by 2:${firstdivisible}`);
