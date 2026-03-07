@@ -133,3 +133,42 @@ function sortProductsByPrice() {
 }
 
 console.log(sortProductsByPrice());
+
+// Write a function that transforms the users array into an object where the keys are the user IDs
+
+function transformUsersToObject(users) {
+  return users.reduce((acc, user) => {
+    acc[user.id] = user;
+    return acc;
+  }, {});
+}
+
+const result = transformUsersToObject(users);
+console.log(result);
+
+// Write a function that counts how many products are in each category
+function countProductsByCategory(products) {
+  return products.reduce((acc, product) => {
+    if (acc[product.category]) {
+      acc[product.category] += 1;
+    } else {
+      acc[product.category] = 1;
+    }
+    return acc;
+  }, {});
+}
+
+const totalCount = countProductsByCategory(products);
+console.log(totalCount);
+
+// Write a function that returns the emails of active users sorted by age (youngest first)
+
+function getActiveUserEmailsSortedByAge(users) {
+  return users
+    .filter((user) => user.isActive)
+    .sort((a, b) => a.age - b.age)
+    .map((user) => user.email);
+}
+
+const activeUser = getActiveUserEmailsSortedByAge(users);
+console.log(activeUser);
