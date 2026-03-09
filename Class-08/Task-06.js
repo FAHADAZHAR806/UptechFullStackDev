@@ -75,3 +75,28 @@ const products = [
   { id: 105, name: "T-shirt", price: 29.99, category: "clothing", stock: 100 },
   { id: 106, name: "Shoes", price: 79.99, category: "clothing", stock: 30 },
 ];
+
+// Write a function that returns all orders with the user's name who placed the order
+const userss = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "Sara" },
+  { id: 3, name: "Ahmed" },
+];
+
+const orders = [
+  { id: 101, product: "Laptop", userId: 1 },
+  { id: 102, product: "Phone", userId: 2 },
+  { id: 103, product: "Book", userId: 1 },
+];
+function getOrdersWithUserNames() {
+  return orders.map((order) => {
+    const user = userss.find((u) => u.id === order.userId);
+
+    return {
+      ...order,
+      userName: user ? user.name : "Unknown",
+    };
+  });
+}
+
+console.log(getOrdersWithUserNames());
