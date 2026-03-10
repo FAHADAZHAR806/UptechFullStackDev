@@ -13,11 +13,16 @@ export default function App() {
   const [answers, setAnswers] = useState([]);
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
+  const [reviewing, setReviewing] = useState(false);
 
   const startQuiz = () => {
     const random = getRandomQuestions(questions, 10);
     setQuiz(random);
     setStarted(true);
+    setFinished(false);
+    setReviewing(false);
+    setIndex(0);
+    setAnswers([]);
   };
 
   const selectAnswer = (option) => {
@@ -39,24 +44,35 @@ export default function App() {
   };
 
   const score = answers.filter((a) => a.selected === a.answer).length;
-  const restartQuiz = () => {
-    const random = getRandomQuestions(questions, 10);
 
-    setQuiz(random);
-    setIndex(0);
-    setAnswers([]);
-    setFinished(false);
+  const restartQuiz = () => {
+    startQuiz();
   };
 
+  const openReview = () => {
+    setReviewing(true);
+  };
+
+  const backToResult = () => {
+    setReviewing(false);
+  };
+
+  // Screen logic
   if (!started) return <StartScreen startQuiz={startQuiz} />;
 
-  if (finished)
+  if (finished && !reviewing)
     return (
-      <div className="p-6">
-        <ResultScreen score={score} total={quiz.length} restart={restartQuiz} />
-        <ReviewAnswers answers={answers} />
-      </div>
+      <ResultScreen
+        score={score}
+        total={quiz.length}
+        restart={restartQuiz}
+        reviewAnswers={openReview} // opens ReviewAnswers screen
+      />
     );
+
+  if (reviewing)
+    return <ReviewAnswers answers={answers} goBack={backToResult} />; // <-- back to result
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <QuestionCard
