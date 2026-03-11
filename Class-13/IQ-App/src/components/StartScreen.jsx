@@ -23,21 +23,23 @@ export default function StartScreen({ startQuiz }) {
         font-bold tracking-tight 
         mb-4 sm:mb-6 text-blue-100"
         >
-          General Knowledge Quiz
+          Challenge Your Mind
         </h1>
 
         {/* Description */}
         <p
           className="text-blue-200 text-sm sm:text-base md:text-lg 
-        mb-6 sm:mb-8 leading-relaxed"
+  mb-6 sm:mb-8 leading-relaxed"
         >
-          Test your knowledge with{" "}
-          <span className="font-semibold text-white">10 random questions</span>{" "}
-          selected from a set of{" "}
+          Challenge your mind with{" "}
           <span className="font-semibold text-white">
-            50 general knowledge questions
+            15 randomly selected questions
           </span>
-          . Choose the correct option and see how smart you really are!
+          . Choose the correct option for each one and discover how sharp your{" "}
+          <span className="font-semibold text-white">
+            knowledge and thinking skills
+          </span>{" "}
+          really are! 🧠✨
         </p>
 
         {/* Button */}
@@ -50,7 +52,7 @@ export default function StartScreen({ startQuiz }) {
           transition-all duration-300
           hover:scale-105"
         >
-          Start Quiz
+          Start Here
         </button>
       </div>
     </div>

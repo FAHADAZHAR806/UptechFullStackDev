@@ -11,7 +11,7 @@ export default function ResultScreen({ score, total, restart, reviewAnswers }) {
     <div className="min-h-screen flex items-center justify-center p-4 bg-blue-950 font-sans">
       <div className="bg-blue-900/70 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 max-w-sm sm:max-w-md md:max-w-lg w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-100 mb-4 sm:mb-6">
-          Quiz Result
+          Result
         </h2>
 
         <p className="text-blue-200 text-lg sm:text-xl md:text-2xl mb-2">
@@ -28,7 +28,7 @@ export default function ResultScreen({ score, total, restart, reviewAnswers }) {
           onClick={restart}
           className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 mb-3"
         >
-          Restart Quiz
+          Restart Here
         </button>
 
         {/* Review Answers */}

@@ -5,7 +5,7 @@ export default function QuestionCard({
   selectAnswer,
 }) {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-blue-950 font-sans">
+    <div className="min-h-screen min-w-screen flex items-center justify-center p-4 bg-blue-950 font-sans">
       {/* Card */}
       <div
         className="bg-blue-900/70 backdrop-blur-xl 

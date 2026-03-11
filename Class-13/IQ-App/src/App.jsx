@@ -16,7 +16,7 @@ export default function App() {
   const [reviewing, setReviewing] = useState(false);
 
   const startQuiz = () => {
-    const random = getRandomQuestions(questions, 10);
+    const random = getRandomQuestions(questions, 15);
     setQuiz(random);
     setStarted(true);
     setFinished(false);
