@@ -1,19 +1,18 @@
 export default function ProductCard({ product, addToCart }) {
   return (
-    <div className="bg-white shadow-md rounded-xl p-4 text-center">
+    <div className="bg-white p-4 rounded shadow">
+      <h2 className="text-lg font-bold">{product.name}</h2>
+
+      <p className="text-gray-600">${product.price}</p>
+
       <img
-        src={product.image}
+        src={product.img}
         alt={product.name}
-        className="mx-auto mb-3 rounded-lg"
+        className="w-full h-60 object-cover  rounded"
       />
-
-      <h2 className="text-lg font-semibold">{product.name}</h2>
-
-      <p className="text-gray-600 mb-3">${product.price}</p>
-
       <button
         onClick={() => addToCart(product)}
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        className="mt-3 bg-blue-500 text-white px-3 py-1 rounded"
       >
         Add To Cart
       </button>

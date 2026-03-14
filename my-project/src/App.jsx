@@ -1,54 +1,26 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
-
+import products from "./data/product";
 function App() {
-  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-
-  // useEffect runs when component mounts
-  useEffect(() => {
-    const productData = [
-      {
-        id: 1,
-        name: "Laptop",
-        price: 1200,
-        image: "https://via.placeholder.com/200",
-      },
-      {
-        id: 2,
-        name: "Phone",
-        price: 800,
-        image: "https://via.placeholder.com/200",
-      },
-      {
-        id: 3,
-        name: "Headphones",
-        price: 200,
-        image: "https://via.placeholder.com/200",
-      },
-      {
-        id: 4,
-        name: "Keyboard",
-        price: 150,
-        image: "https://via.placeholder.com/200",
-      },
-    ];
-
-    setProducts(productData);
-  }, []);
 
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
 
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">Product Store</h1>
+    <div className="min-h-screen bg-gray-100">
+      <Navbar cartCount={cart.length} />
 
-      <Cart cartCount={cart.length} />
+      <div className="flex flex-col md:flex-row p-6 gap-6">
+        <ProductList products={products} addToCart={addToCart} />
 
-      <ProductList products={products} addToCart={addToCart} />
+        <Cart cart={cart} totalPrice={totalPrice} />
+      </div>
     </div>
   );
 }
