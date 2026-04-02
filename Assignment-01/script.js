@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ---------- Variables ----------
-  const name = "Fahad";
-  const age = 25;
+  const name = "Hassan";
+  const age = 20;
   const isStudent = true;
   const designation = undefined;
   const absent = null;

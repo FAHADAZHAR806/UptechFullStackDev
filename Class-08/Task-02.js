@@ -8,18 +8,14 @@ let Result = numbers.reduce((acc, num) => {
 console.log(Result);
 
 // 2. Add a new number to the end of the array [1 mark]
-
 numbers.push(6);
 console.log(numbers);
-
 // Remove the first number from the array [1 mark]
 numbers.shift();
 console.log(numbers);
-
 //  Reverse the array [1 mark]
-
 let reversed = [];
-for (let i = numbers.length; i >= 0; i--) {
+for (let i = numbers.length; i > 0; i--) {
   reversed.push(i);
 }
 console.log(reversed);

@@ -32,10 +32,13 @@ console.log(getDayName(9));
 
 function PrintNumbers() {
   let i = 1;
+  let nums = [];
   while (i <= 10) {
-    console.log(i);
+    nums.push(i);
+
     i++;
   }
+  console.log(nums);
 }
 PrintNumbers();
 
@@ -44,9 +47,11 @@ PrintNumbers();
 
 function PrintNums() {
   let i = 10;
+  let num=[]
   do {
-    console.log(i);
+    num.push(i)
     i--;
   } while (i > 0);
+  console.log(num);
 }
 PrintNums();
