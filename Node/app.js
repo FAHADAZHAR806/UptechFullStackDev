@@ -14,10 +14,10 @@
 // app.listen(port, () => {
 //   console.log(`Server running at http://localhost:${port}`);
 // });
-
+require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = 3000;
+// const port = 3000;
 
 // Routes import
 const userRoutes = require("./src/routes/userRoute");
@@ -32,6 +32,6 @@ app.get("/", (req, res) => {
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server running at http://localhost:${process.env.PORT}`);
 });
